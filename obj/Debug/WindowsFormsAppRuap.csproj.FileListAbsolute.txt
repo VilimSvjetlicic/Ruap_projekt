@@ -1,0 +1,15 @@
+C:\Users\Korisnik\Desktop\Aplikacija\WindowsFormsAppRuap\bin\Debug\WindowsFormsAppRuap.exe.config
+C:\Users\Korisnik\Desktop\Aplikacija\WindowsFormsAppRuap\bin\Debug\WindowsFormsAppRuap.exe
+C:\Users\Korisnik\Desktop\Aplikacija\WindowsFormsAppRuap\bin\Debug\WindowsFormsAppRuap.pdb
+C:\Users\Korisnik\Desktop\Aplikacija\WindowsFormsAppRuap\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Korisnik\Desktop\Aplikacija\WindowsFormsAppRuap\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\Korisnik\Desktop\Aplikacija\WindowsFormsAppRuap\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Korisnik\Desktop\Aplikacija\WindowsFormsAppRuap\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\Korisnik\Desktop\Aplikacija\WindowsFormsAppRuap\obj\Debug\WindowsFormsAppRuap.csproj.AssemblyReference.cache
+C:\Users\Korisnik\Desktop\Aplikacija\WindowsFormsAppRuap\obj\Debug\WindowsFormsAppRuap.Properties.Resources.resources
+C:\Users\Korisnik\Desktop\Aplikacija\WindowsFormsAppRuap\obj\Debug\WindowsFormsAppRuap.csproj.GenerateResource.cache
+C:\Users\Korisnik\Desktop\Aplikacija\WindowsFormsAppRuap\obj\Debug\WindowsFormsAppRuap.csproj.CoreCompileInputs.cache
+C:\Users\Korisnik\Desktop\Aplikacija\WindowsFormsAppRuap\obj\Debug\WindowsFormsAppRuap.csproj.CopyComplete
+C:\Users\Korisnik\Desktop\Aplikacija\WindowsFormsAppRuap\obj\Debug\WindowsFormsAppRuap.exe
+C:\Users\Korisnik\Desktop\Aplikacija\WindowsFormsAppRuap\obj\Debug\WindowsFormsAppRuap.pdb
+C:\Users\Korisnik\Desktop\Aplikacija\WindowsFormsAppRuap\obj\Debug\WindowsFormsAppRuap.Form1.resources
