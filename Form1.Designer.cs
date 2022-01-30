@@ -98,6 +98,7 @@ namespace WindowsFormsAppRuap
             this.comboBox13 = new System.Windows.Forms.ComboBox();
             this.groupBox27 = new System.Windows.Forms.GroupBox();
             this.comboBox14 = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -141,12 +142,12 @@ namespace WindowsFormsAppRuap
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(1199, 158);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label1.Location = new System.Drawing.Point(1200, 103);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 17);
+            this.label1.Size = new System.Drawing.Size(131, 17);
             this.label1.TabIndex = 0;
-            this.label1.Text = "label1";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.label1.Text = "Predicted value: ";
             // 
             // groupBox1
             // 
@@ -158,7 +159,6 @@ namespace WindowsFormsAppRuap
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Sex";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // radioButton2
             // 
@@ -817,7 +817,6 @@ namespace WindowsFormsAppRuap
             this.groupBox22.TabIndex = 23;
             this.groupBox22.TabStop = false;
             this.groupBox22.Text = "Workday alcohol consumption";
-            this.groupBox22.Enter += new System.EventHandler(this.groupBox22_Enter);
             // 
             // comboBox10
             // 
@@ -984,12 +983,23 @@ namespace WindowsFormsAppRuap
             this.comboBox14.TabIndex = 38;
             this.comboBox14.SelectedIndexChanged += new System.EventHandler(this.comboBox14_SelectedIndexChanged);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label2.Location = new System.Drawing.Point(1200, 149);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(68, 17);
+            this.label2.TabIndex = 29;
+            this.label2.Text = "            ";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1384, 671);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox27);
             this.Controls.Add(this.groupBox3);
@@ -1020,8 +1030,7 @@ namespace WindowsFormsAppRuap
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Text = "Matematics grade predictor";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -1137,6 +1146,7 @@ namespace WindowsFormsAppRuap
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ComboBox comboBox13;
         private System.Windows.Forms.ComboBox comboBox14;
+        private System.Windows.Forms.Label label2;
     }
 }
 

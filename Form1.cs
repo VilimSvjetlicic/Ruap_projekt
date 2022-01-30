@@ -20,7 +20,7 @@ namespace WindowsFormsAppRuap
 
     public partial class Form1 : Form
     {
-        public string[,] inputValues= new string[33,33];
+        public string[] inputValues= new string[] { "value", "value", "0", "value", "value", "value", "0", "0", "value", "value", "value", "value", "0", "0", "0", "value", "value", "value", "value", "value", "value", "value", "value", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" };
 
 
         public Form1()
@@ -28,19 +28,9 @@ namespace WindowsFormsAppRuap
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private async void button1_Click(object sender, EventArgs e)
         {
-            inputValues[0, 0] = "value";
-            inputValues[0, 4] = "value";
-            inputValues[0, 8] = "value";
-            inputValues[0, 9] = "value";
-            inputValues[0, 10] = "value";
-            inputValues[0, 32] = "0";
 
             using (var client = new HttpClient())
             {
@@ -53,8 +43,11 @@ namespace WindowsFormsAppRuap
                             new StringTable()
                             {
                                 ColumnNames = new string[] {"school", "sex", "age", "address", "famsize", "Pstatus", "Medu", "Fedu", "Mjob", "Fjob", "reason", "guardian", "traveltime", "studytime", "failures", "schoolsup", "famsup", "paid", "activities", "nursery", "higher", "internet", "romantic", "famrel", "freetime", "goout", "Dalc", "Walc", "health", "absences", "G1", "G2", "G3"},
-                                Values =new string[,] { { inputValues[0,0], inputValues[0,1], inputValues[0,2], inputValues[0,3], inputValues[0,4], inputValues[0,5], inputValues[0,6], inputValues[0,7], inputValues[0,8], inputValues[0,9], inputValues[0,10], inputValues[0,11], inputValues[0,12], inputValues[0,13], inputValues[0,14], inputValues[0,15], inputValues[0,16], inputValues[0,17], inputValues[0,18], inputValues[0,19], inputValues[0,20], inputValues[0,21], inputValues[0,22], inputValues[0,23], inputValues[0,24], inputValues[0,25], inputValues[0,26], inputValues[0,27], inputValues[0,28], inputValues[0,29], inputValues[0,30], inputValues[0,31], inputValues[0,32] } } // {  { "value", "value", "0", "value", "value", "value", "0", "0", "value", "value", "value", "value", "0", "0", "0", "value", "value", "value", "value", "value", "value", "value", "value", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" } ,  { "value", "value", "0", "value", "value", "value", "0", "0", "value", "value", "value", "value", "0", "0", "0", "value", "value", "value", "value", "value", "value", "value", "value", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" },  }
-    
+                                Values =new string[,] { { inputValues[0], inputValues[1], inputValues[2], inputValues[3], inputValues[4], inputValues[5],
+                                        inputValues[6], inputValues[7], inputValues[8], inputValues[9], inputValues[10], inputValues[11], inputValues[12],
+                                        inputValues[13], inputValues[14], inputValues[15], inputValues[16], inputValues[17], inputValues[18], inputValues[19],
+                                        inputValues[20], inputValues[21], inputValues[22], inputValues[23], inputValues[24], inputValues[25], inputValues[26], 
+                                        inputValues[27], inputValues[28], inputValues[29], inputValues[30], inputValues[31], inputValues[32] } } 
                             }
                         },
                     },
@@ -87,9 +80,8 @@ namespace WindowsFormsAppRuap
 
                     string finalResult = value.Results.output1.value.getLastValue();
 
-                    label1.Text = finalResult;
+                    label2.Text = finalResult.Substring(0,5);
 
-                    Console.WriteLine(value.Results.output1.value.getLastValue());
 
                 }
                 else
@@ -105,224 +97,247 @@ namespace WindowsFormsAppRuap
             }
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-            inputValues[0,1] = "M";
+            inputValues[1] = "M";
+            label2.Text = "";
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
-            inputValues[0,1] = "F";
+            inputValues[1] = "F";
+            label2.Text = "";
         }
 
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
 
-        }
-
-        private void groupBox22_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            inputValues[0, 2] = comboBox1.SelectedItem.ToString();
+            inputValues[2] = comboBox1.SelectedItem.ToString();
+            label2.Text = "";
         }
 
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
         {
-            inputValues[0, 3] = "U";
+            inputValues[3] = "U";
+            label2.Text = "";
         }
 
         private void radioButton4_CheckedChanged(object sender, EventArgs e)
         {
-            inputValues[0, 3] = "R";
+            inputValues[3] = "R";
+            label2.Text = "";
         }
 
         private void radioButton5_CheckedChanged(object sender, EventArgs e)
         {
-            inputValues[0, 5]="T";
+            inputValues[5]="T";
+            label2.Text = "";
         }
 
         private void radioButton6_CheckedChanged(object sender, EventArgs e)
         {
-            inputValues[0, 5] = "A";
+            inputValues[5] = "A";
+            label2.Text = "";
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            inputValues[0, 6] = comboBox2.SelectedItem.ToString();
+            inputValues[6] = comboBox2.SelectedItem.ToString();
+            label2.Text = "";
         }
 
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
-            inputValues[0, 7] = comboBox3.SelectedItem.ToString();
+            inputValues[7] = comboBox3.SelectedItem.ToString();
+            label2.Text = "";
         }
 
         private void radioButton7_CheckedChanged(object sender, EventArgs e)
         {
-            inputValues[0, 11] = "mother";
+            inputValues[11] = "mother";
+            label2.Text = "";
         }
 
         private void radioButton8_CheckedChanged(object sender, EventArgs e)
         {
-            inputValues[0, 11] = "father";
+            inputValues[11] = "father";
+            label2.Text = "";
         }
 
         private void radioButton9_CheckedChanged(object sender, EventArgs e)
         {
-            inputValues[0, 11] = "other";
+            inputValues[11] = "other";
+            label2.Text = "";
         }
 
         private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
         {
-            inputValues[0, 12] = comboBox4.SelectedItem.ToString();
+            inputValues[12] = comboBox4.SelectedItem.ToString();
+            label2.Text = "";
         }
 
         private void comboBox5_SelectedIndexChanged(object sender, EventArgs e)
         {
-            inputValues[0, 13] = comboBox5.SelectedItem.ToString();
+            inputValues[13] = comboBox5.SelectedItem.ToString();
+            label2.Text = "";
         }
 
         private void comboBox6_SelectedIndexChanged(object sender, EventArgs e)
         {
-            inputValues[0, 14] = comboBox6.SelectedItem.ToString();
+            inputValues[14] = comboBox6.SelectedItem.ToString();
+            label2.Text = "";
         }
 
         private void radioButton10_CheckedChanged(object sender, EventArgs e)
         {
-            inputValues[0, 15] = "yes";
+            inputValues[15] = "yes";
+            label2.Text = "";
         }
 
         private void radioButton11_CheckedChanged(object sender, EventArgs e)
         {
-            inputValues[0, 15] = "no";
+            inputValues[15] = "no";
+            label2.Text = "";
         }
 
         private void radioButton13_CheckedChanged(object sender, EventArgs e)
         {
-            inputValues[0, 16] = "yes";
+            inputValues[16] = "yes";
+            label2.Text = "";
         }
 
         private void radioButton12_CheckedChanged(object sender, EventArgs e)
         {
-            inputValues[0, 16] = "no";
+            inputValues[16] = "no";
+            label2.Text = "";
         }
 
         private void radioButton15_CheckedChanged(object sender, EventArgs e)
         {
-            inputValues[0, 17] = "yes";
+            inputValues[17] = "yes";
+            label2.Text = "";
         }
 
         private void radioButton14_CheckedChanged(object sender, EventArgs e)
         {
-            inputValues[0, 17] = "no";
+            inputValues[17] = "no";
+            label2.Text = "";
         }
 
         private void radioButton17_CheckedChanged(object sender, EventArgs e)
         {
-            inputValues[0, 18] = "yes";
+            inputValues[18] = "yes";
+            label2.Text = "";
         }
 
         private void radioButton16_CheckedChanged(object sender, EventArgs e)
         {
-            inputValues[0, 18] = "no";
+            inputValues[18] = "no";
+            label2.Text = "";
         }
 
         private void radioButton19_CheckedChanged(object sender, EventArgs e)
         {
-            inputValues[0, 19] = "yes";
+            inputValues[19] = "yes";
+            label2.Text = "";
         }
 
         private void radioButton18_CheckedChanged(object sender, EventArgs e)
         {
-            inputValues[0, 19] = "no";
+            inputValues[19] = "no";
+            label2.Text = "";
         }
 
         private void radioButton21_CheckedChanged(object sender, EventArgs e)
         {
-            inputValues[0, 20] = "yes";
+            inputValues[20] = "yes";
+            label2.Text = "";
         }
 
         private void radioButton20_CheckedChanged(object sender, EventArgs e)
         {
-            inputValues[0, 20] = "no";
+            inputValues[20] = "no";
+            label2.Text = "";
         }
 
         private void radioButton23_CheckedChanged(object sender, EventArgs e)
         {
-            inputValues[0, 21] = "yes";
+            inputValues[21] = "yes";
+            label2.Text = "";
         }
 
         private void radioButton22_CheckedChanged(object sender, EventArgs e)
         {
-            inputValues[0, 21] = "no";
+            inputValues[21] = "no";
+            label2.Text = "";
         }
 
         private void radioButton25_CheckedChanged(object sender, EventArgs e)
         {
-            inputValues[0,22] = "yes";
+            inputValues[22] = "yes";
+            label2.Text = "";
         }
 
         private void radioButton24_CheckedChanged(object sender, EventArgs e)
         {
-            inputValues[0, 22] = "no";
+            inputValues[22] = "no";
+            label2.Text = "";
         }
 
         private void comboBox7_SelectedIndexChanged(object sender, EventArgs e)
         {
-            inputValues[0, 23] = comboBox7.SelectedItem.ToString();
+            inputValues[23] = comboBox7.SelectedItem.ToString();
+            label2.Text = "";
         }
 
         private void comboBox8_SelectedIndexChanged(object sender, EventArgs e)
         {
-            inputValues[0, 24] = comboBox8.SelectedItem.ToString();
+            inputValues[24] = comboBox8.SelectedItem.ToString();
+            label2.Text = "";
         }
 
         private void comboBox9_SelectedIndexChanged(object sender, EventArgs e)
         {
-            inputValues[0, 25] = comboBox9.SelectedItem.ToString();
+            inputValues[25] = comboBox9.SelectedItem.ToString();
+            label2.Text = "";
         }
 
         private void comboBox10_SelectedIndexChanged(object sender, EventArgs e)
         {
-            inputValues[0, 26] = comboBox10.SelectedItem.ToString();
+            inputValues[26] = comboBox10.SelectedItem.ToString();
+            label2.Text = "";
         }
 
         private void comboBox11_SelectedIndexChanged(object sender, EventArgs e)
         {
-            inputValues[0, 27] = comboBox11.SelectedItem.ToString();
+            inputValues[27] = comboBox11.SelectedItem.ToString();
+            label2.Text = "";
         }
 
         private void comboBox12_SelectedIndexChanged(object sender, EventArgs e)
         {
-            inputValues[0, 28] = comboBox12.SelectedItem.ToString();
+            inputValues[28] = comboBox12.SelectedItem.ToString();
+            label2.Text = "";
         }
 
         private void comboBox13_SelectedIndexChanged(object sender, EventArgs e)
         {
-            inputValues[0, 30] = comboBox13.SelectedItem.ToString();
+            inputValues[30] = comboBox13.SelectedItem.ToString();
+            label2.Text = "";
         }
 
         private void comboBox14_SelectedIndexChanged(object sender, EventArgs e)
         {
-            inputValues[0, 31] = comboBox14.SelectedItem.ToString();
+            inputValues[31] = comboBox14.SelectedItem.ToString();
+            label2.Text = "";
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            inputValues[0, 29] = textBox1.Text;
+            inputValues[29] = textBox1.Text;
+            label2.Text = "";
         }
     }
     public class StringTable
