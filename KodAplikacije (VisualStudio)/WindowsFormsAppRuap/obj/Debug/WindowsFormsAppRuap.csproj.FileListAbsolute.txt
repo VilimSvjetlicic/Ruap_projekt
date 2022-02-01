@@ -13,3 +13,7 @@ C:\Users\Korisnik\Desktop\Aplikacija\WindowsFormsAppRuap\obj\Debug\WindowsFormsA
 C:\Users\Korisnik\Desktop\Aplikacija\WindowsFormsAppRuap\obj\Debug\WindowsFormsAppRuap.exe
 C:\Users\Korisnik\Desktop\Aplikacija\WindowsFormsAppRuap\obj\Debug\WindowsFormsAppRuap.pdb
 C:\Users\Korisnik\Desktop\Aplikacija\WindowsFormsAppRuap\obj\Debug\WindowsFormsAppRuap.Form1.resources
+C:\Users\Korisnik\Desktop\Aplikacija\WindowsFormsAppRuap\bin\Debug\WindowsFormsAppRuap.exe.manifest
+C:\Users\Korisnik\Desktop\Aplikacija\WindowsFormsAppRuap\bin\Debug\WindowsFormsAppRuap.application
+C:\Users\Korisnik\Desktop\Aplikacija\WindowsFormsAppRuap\obj\Debug\WindowsFormsAppRuap.exe.manifest
+C:\Users\Korisnik\Desktop\Aplikacija\WindowsFormsAppRuap\obj\Debug\WindowsFormsAppRuap.application

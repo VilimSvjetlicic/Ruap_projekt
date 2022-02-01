@@ -21,8 +21,12 @@ namespace WindowsFormsAppRuap
     public partial class Form1 : Form
     {
         public string[] inputValues= new string[] { "value", "value", "0", "value", "value", "value", "0", "0", "value", "value", "value", "value", "0", "0", "0", "value", "value", "value", "value", "value", "value", "value", "value", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" };
-
-
+        public string grade;
+        public void clearLabel() {
+            label2.Text = "";
+            label4.Text = "";
+        }
+        
         public Form1()
         {
             InitializeComponent();
@@ -80,8 +84,35 @@ namespace WindowsFormsAppRuap
 
                     string finalResult = value.Results.output1.value.getLastValue();
 
-                    label2.Text = finalResult.Substring(0,5);
+                    double Result=double.Parse(finalResult, System.Globalization.CultureInfo.InvariantCulture);
 
+
+                    if (Result <= 20 && Result >= 17.5) {
+                        grade = "Excellent";
+                    }
+                    else if(Result <= 17.4 && Result >= 15.5)
+                    {
+                        grade = "Very good";
+                    }
+                    else if (Result <= 15.4 && Result >= 13.5)
+                    {
+                        grade = "Good";
+                    }
+                    else if (Result <= 13.4 && Result >= 9.5)
+                    {
+                        grade = "Sufficient";
+                    }
+                    else if (Result <= 9.4 && Result >= 3.5)
+                    {
+                        grade = "Weak";
+                    }
+                    else
+                    {
+                        grade = "Poor";
+                    }
+
+                    label2.Text= Math.Round(Result, 2).ToString();
+                    label4.Text = grade;
 
                 }
                 else
@@ -101,13 +132,13 @@ namespace WindowsFormsAppRuap
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
             inputValues[1] = "M";
-            label2.Text = "";
+            clearLabel();
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
             inputValues[1] = "F";
-            label2.Text = "";
+            clearLabel();
         }
 
 
@@ -115,230 +146,231 @@ namespace WindowsFormsAppRuap
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             inputValues[2] = comboBox1.SelectedItem.ToString();
-            label2.Text = "";
+            clearLabel();
         }
 
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
         {
             inputValues[3] = "U";
-            label2.Text = "";
+            clearLabel();
         }
 
         private void radioButton4_CheckedChanged(object sender, EventArgs e)
         {
             inputValues[3] = "R";
-            label2.Text = "";
+            clearLabel();
         }
 
         private void radioButton5_CheckedChanged(object sender, EventArgs e)
         {
             inputValues[5]="T";
-            label2.Text = "";
+            clearLabel();
         }
 
         private void radioButton6_CheckedChanged(object sender, EventArgs e)
         {
             inputValues[5] = "A";
-            label2.Text = "";
+            clearLabel();
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
             inputValues[6] = comboBox2.SelectedItem.ToString();
-            label2.Text = "";
+            clearLabel();
         }
 
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
             inputValues[7] = comboBox3.SelectedItem.ToString();
-            label2.Text = "";
+            clearLabel();
         }
 
         private void radioButton7_CheckedChanged(object sender, EventArgs e)
         {
             inputValues[11] = "mother";
-            label2.Text = "";
+            clearLabel();
         }
 
         private void radioButton8_CheckedChanged(object sender, EventArgs e)
         {
             inputValues[11] = "father";
-            label2.Text = "";
+            clearLabel();
         }
 
         private void radioButton9_CheckedChanged(object sender, EventArgs e)
         {
             inputValues[11] = "other";
-            label2.Text = "";
+            clearLabel();
         }
 
         private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
         {
             inputValues[12] = comboBox4.SelectedItem.ToString();
-            label2.Text = "";
+            clearLabel();
         }
 
         private void comboBox5_SelectedIndexChanged(object sender, EventArgs e)
         {
             inputValues[13] = comboBox5.SelectedItem.ToString();
-            label2.Text = "";
+            clearLabel();
         }
 
         private void comboBox6_SelectedIndexChanged(object sender, EventArgs e)
         {
             inputValues[14] = comboBox6.SelectedItem.ToString();
-            label2.Text = "";
+            clearLabel();
         }
 
         private void radioButton10_CheckedChanged(object sender, EventArgs e)
         {
             inputValues[15] = "yes";
-            label2.Text = "";
+            clearLabel();
         }
 
         private void radioButton11_CheckedChanged(object sender, EventArgs e)
         {
             inputValues[15] = "no";
-            label2.Text = "";
+            clearLabel();
         }
 
         private void radioButton13_CheckedChanged(object sender, EventArgs e)
         {
             inputValues[16] = "yes";
-            label2.Text = "";
+            clearLabel();
         }
 
         private void radioButton12_CheckedChanged(object sender, EventArgs e)
         {
             inputValues[16] = "no";
-            label2.Text = "";
+            clearLabel();
         }
 
         private void radioButton15_CheckedChanged(object sender, EventArgs e)
         {
             inputValues[17] = "yes";
-            label2.Text = "";
+            clearLabel();
         }
 
         private void radioButton14_CheckedChanged(object sender, EventArgs e)
         {
             inputValues[17] = "no";
-            label2.Text = "";
+            clearLabel();
         }
 
         private void radioButton17_CheckedChanged(object sender, EventArgs e)
         {
             inputValues[18] = "yes";
-            label2.Text = "";
+            clearLabel();
         }
 
         private void radioButton16_CheckedChanged(object sender, EventArgs e)
         {
             inputValues[18] = "no";
-            label2.Text = "";
+            clearLabel();
         }
 
         private void radioButton19_CheckedChanged(object sender, EventArgs e)
         {
             inputValues[19] = "yes";
-            label2.Text = "";
+            clearLabel();
         }
 
         private void radioButton18_CheckedChanged(object sender, EventArgs e)
         {
             inputValues[19] = "no";
-            label2.Text = "";
+            clearLabel();
         }
 
         private void radioButton21_CheckedChanged(object sender, EventArgs e)
         {
             inputValues[20] = "yes";
-            label2.Text = "";
+            clearLabel();
         }
 
         private void radioButton20_CheckedChanged(object sender, EventArgs e)
         {
             inputValues[20] = "no";
-            label2.Text = "";
+            clearLabel();
         }
 
         private void radioButton23_CheckedChanged(object sender, EventArgs e)
         {
             inputValues[21] = "yes";
-            label2.Text = "";
+            clearLabel();
         }
 
         private void radioButton22_CheckedChanged(object sender, EventArgs e)
         {
             inputValues[21] = "no";
-            label2.Text = "";
+            clearLabel();
         }
 
         private void radioButton25_CheckedChanged(object sender, EventArgs e)
         {
             inputValues[22] = "yes";
-            label2.Text = "";
+            clearLabel();
         }
 
         private void radioButton24_CheckedChanged(object sender, EventArgs e)
         {
             inputValues[22] = "no";
-            label2.Text = "";
+            clearLabel();
         }
 
         private void comboBox7_SelectedIndexChanged(object sender, EventArgs e)
         {
             inputValues[23] = comboBox7.SelectedItem.ToString();
-            label2.Text = "";
+            clearLabel();
         }
 
         private void comboBox8_SelectedIndexChanged(object sender, EventArgs e)
         {
             inputValues[24] = comboBox8.SelectedItem.ToString();
-            label2.Text = "";
+            clearLabel();
         }
 
         private void comboBox9_SelectedIndexChanged(object sender, EventArgs e)
         {
             inputValues[25] = comboBox9.SelectedItem.ToString();
-            label2.Text = "";
+            clearLabel();
         }
 
         private void comboBox10_SelectedIndexChanged(object sender, EventArgs e)
         {
             inputValues[26] = comboBox10.SelectedItem.ToString();
-            label2.Text = "";
+            clearLabel();
         }
 
         private void comboBox11_SelectedIndexChanged(object sender, EventArgs e)
         {
             inputValues[27] = comboBox11.SelectedItem.ToString();
-            label2.Text = "";
+            clearLabel();
         }
 
         private void comboBox12_SelectedIndexChanged(object sender, EventArgs e)
         {
             inputValues[28] = comboBox12.SelectedItem.ToString();
-            label2.Text = "";
+            clearLabel();
         }
 
         private void comboBox13_SelectedIndexChanged(object sender, EventArgs e)
         {
             inputValues[30] = comboBox13.SelectedItem.ToString();
-            label2.Text = "";
+            clearLabel();
         }
 
         private void comboBox14_SelectedIndexChanged(object sender, EventArgs e)
         {
             inputValues[31] = comboBox14.SelectedItem.ToString();
-            label2.Text = "";
+            clearLabel();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             inputValues[29] = textBox1.Text;
-            label2.Text = "";
+            clearLabel();
         }
+
     }
     public class StringTable
     {

@@ -99,6 +99,8 @@ namespace WindowsFormsAppRuap
             this.groupBox27 = new System.Windows.Forms.GroupBox();
             this.comboBox14 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -143,7 +145,7 @@ namespace WindowsFormsAppRuap
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.Location = new System.Drawing.Point(1200, 103);
+            this.label1.Location = new System.Drawing.Point(1155, 121);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(131, 17);
             this.label1.TabIndex = 0;
@@ -987,11 +989,31 @@ namespace WindowsFormsAppRuap
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label2.Location = new System.Drawing.Point(1200, 149);
+            this.label2.Location = new System.Drawing.Point(1292, 121);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(68, 17);
             this.label2.TabIndex = 29;
             this.label2.Text = "            ";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label3.Location = new System.Drawing.Point(1228, 183);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(58, 17);
+            this.label3.TabIndex = 30;
+            this.label3.Text = "Grade:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label4.Location = new System.Drawing.Point(1292, 183);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(78, 17);
+            this.label4.TabIndex = 31;
+            this.label4.Text = "              ";
             // 
             // Form1
             // 
@@ -999,6 +1021,8 @@ namespace WindowsFormsAppRuap
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1384, 671);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox27);
@@ -1147,6 +1171,8 @@ namespace WindowsFormsAppRuap
         private System.Windows.Forms.ComboBox comboBox13;
         private System.Windows.Forms.ComboBox comboBox14;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }
 
